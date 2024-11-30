@@ -4,7 +4,7 @@ from django.db import models
 class Kitob(models.Model):
     nomi = models.CharField(max_length=256)
     muallifi = models.CharField(max_length=256)
-    yili = models.DateField(auto_now_add=True)
+    yili = models.DateField()
     betlari_soni = models.IntegerField()
     janri = models.CharField(max_length=256)
     rasmi = models.ImageField(upload_to='rasmlar/')

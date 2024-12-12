@@ -1,48 +1,13 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Islomjon</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            margin: 20px;
-            padding: 0;
-        }
-        .book-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .book-item {
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            width: 200px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            padding: 15px;
-        }
-        .book-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 4px;
-        }
-        .book-info {
-            margin-top: 10px;
-        }
-        .book-info h3 {
-            font-size: 18px;
-            margin: 10px 0 5px;
-        }
-        .book-info p {
-            font-size: 14px;
-            margin: 5px 0;
-            color: #555;
-        }
-    </style>
+    <!-- <link rel="stylesheet" href="/static/style.css"> -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
 </head>
 <body>
     <h1>Bu kitoblar sayti</h1>

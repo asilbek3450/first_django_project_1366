@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Islomjon</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 20px;
+            padding: 0;
+        }
+        .book-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .book-item {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 200px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 15px;
+        }
+        .book-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .book-info {
+            margin-top: 10px;
+        }
+        .book-info h3 {
+            font-size: 18px;
+            margin: 10px 0 5px;
+        }
+        .book-info p {
+            font-size: 14px;
+            margin: 5px 0;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bu kitoblar sayti</h1>
+
+    <div class="book-list">
+
+        {% for book in books %}
+        <!-- Kitob 1 -->
+        <div class="book-item">
+            <img src="{{ book.rasmi.url }}" alt="Kitob rasmi">
+            <div class="book-info">
+                <h3>{{ book.nomi }}</h3>
+                <p>Muallif: {{ book.muallifi }}</p>
+                <p>Betlar soni: {{ book.betlari_soni }}</p>
+            </div>
+        </div>
+        {% endfor %}
+        
+    </div>
+
+</body>
+</html>

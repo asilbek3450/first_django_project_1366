@@ -1,10 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Kitob
 
 # Create your views here.
 def homepage(request):
-    text = "Mening birinchi Django saytim"
-    text += '<br><br>Mening ismim Asilbek, Hello World!'
-    return HttpResponse(text)
+    kitoblar = Kitob.objects.all()
+    context = {
+        'books': kitoblar
+    }
+    return render(request, template_name='index.html', context=context)
+
+
 
 

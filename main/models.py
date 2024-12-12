@@ -17,7 +17,10 @@ class Kitob(models.Model):
     def __str__(self):
         return self.nomi
     
-
+    # edit image name to name of book
+    def save(self, *args, **kwargs):
+        self.rasmi.name = f'{self.nomi}_rasmi'
+        super().save(*args, **kwargs)
 
 class Vazifa(models.Model):
     nomi = models.CharField(max_length=256)
